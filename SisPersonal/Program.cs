@@ -20,5 +20,9 @@ for (int i = 0; i < 3; i++)
     aux = Antiguedad;
     MontoTotal += empleados[i].Salario(empleados[i].SueldoBasico, Antiguedad, empleados[i].Cargo, empleados[i].EstadoCivil);
 }
+int edadEmpleado = empleados[indiceEmpleado].CalcularEdad(empleados.[indiceEmpleado].FechaNacimiento);
+Antiguedad = empleados[indiceEmpleado].CalcularAntiguedad(empleados[indiceEmpleado].FechaDeIngreso);
+double salario = empleados[indiceEmpleado].Salario(empleados[indiceEmpleado].SueldoBasico, Antiguedad, empleados[indiceEmpleado].Cargo, empleados[indiceEmpleado].EstadoCivil);
+int jubilarse = empleados[indiceEmpleado].Jubilacion(edadEmpleado);
 
-Console.WriteLine($"El Empleado que esta mas proximo a jubilarse es :{empleados[indiceEmpleado].Nombre}+{empleados[indiceEmpleado].Apellido}\n lleva una antiguedad de {Antiguedad}años , tiene {}años , su salario es de {}. Le falta para jubilarse {},");
+Console.WriteLine($"El Empleado que esta mas proximo a jubilarse es :{empleados[indiceEmpleado].Nombre}+{empleados[indiceEmpleado].Apellido}\n lleva una antiguedad de {Antiguedad}años , tiene {edadEmpleado} años , su salario es de {salario}. Le falta para jubilarse {jubilarse}.");
