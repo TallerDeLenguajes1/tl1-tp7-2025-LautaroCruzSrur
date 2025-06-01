@@ -2,14 +2,57 @@ namespace EmpleadosSpace;
 
 public class Empleado
 {
-    private string Nombre;
-    private string Apellido;
+    private string nombre;
+    private string apellido;
 
-    private DateTime FechaNacimiento;
+    private DateTime fechaNacimiento;
 
-    private char EstadoCivil;
-    private DateTime FechaDeIngresoEnLaEmpresa;
-    private double SueldoBasico;
+    private char estadoCivil;
+    private DateTime fechaDeIngreso;
+    private double sueldoBasico;
+    private Cargos cargo;
+    public string Nombre
+{
+    get => nombre;
+    set => nombre = value;
+}
+
+public string Apellido
+{
+    get => apellido;
+    set => apellido = value;
+}
+
+public DateTime FechaNacimiento
+{
+    get => fechaNacimiento;
+    set => fechaNacimiento = value;
+}
+
+public char EstadoCivil
+{
+    get => estadoCivil;
+    set => estadoCivil = value;
+}
+
+public DateTime FechaDeIngreso
+{
+    get => fechaDeIngreso;
+    set => fechaDeIngreso = value;
+}
+
+public double SueldoBasico
+{
+    get => sueldoBasico;
+    set => sueldoBasico = value;
+}
+
+public Cargos Cargo
+{
+    get => cargo;
+    set => cargo = value;
+}
+
 
     public enum Cargos
     {
@@ -27,7 +70,7 @@ public class Empleado
         if (hoy.Month < FechaDeIngresoEnLaEmpresa.Month || (hoy.Month == FechaDeIngresoEnLaEmpresa.Month && hoy.Day < FechaDeIngresoEnLaEmpresa.Day))
         {
             Antiguedad--;
-    }
+        }
 
         return Antiguedad;
     }
@@ -39,7 +82,7 @@ public class Empleado
         if (hoy.Month < FechaNacimiento.Month || (hoy.Month == FechaNacimiento.Month && hoy.Day < FechaNacimiento.Day))
         {
             edad--;
-    }
+        }
 
         return edad;
 
@@ -50,7 +93,7 @@ public class Empleado
 
         return JubilacionEdad;
     }
-    public double Salario(double SueldoBasico, int Antiguedad, Cargos Cargo)
+    public double Salario(double SueldoBasico, int Antiguedad, Cargos Cargo, char EstadoCivil)
     {
         double Adicional = 0;
         if (Antiguedad > 20)
@@ -73,4 +116,16 @@ public class Empleado
 
         return salario;
     }
+    
+    public Empleado(string nombre, string apellido, DateTime fechaNacimiento, char estadoCivil, DateTime fechaDeIngreso, double sueldoBasico, Cargos cargo)
+{
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.fechaNacimiento = fechaNacimiento;
+    this.estadoCivil = estadoCivil;
+    this.fechaDeIngreso = fechaDeIngreso;
+    this.sueldoBasico = sueldoBasico;
+    this.cargo = cargo;
+}
+
 }
