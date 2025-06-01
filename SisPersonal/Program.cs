@@ -20,7 +20,7 @@ for (int i = 0; i < 3; i++)
     aux = Antiguedad;
     MontoTotal += empleados[i].Salario(empleados[i].SueldoBasico, Antiguedad, empleados[i].Cargo, empleados[i].EstadoCivil);
 }
-int edadEmpleado = empleados[indiceEmpleado].CalcularEdad(empleados.[indiceEmpleado].FechaNacimiento);
+int edadEmpleado = empleados[indiceEmpleado].CalcularEdad(empleados[indiceEmpleado].FechaNacimiento);
 Antiguedad = empleados[indiceEmpleado].CalcularAntiguedad(empleados[indiceEmpleado].FechaDeIngreso);
 double salario = empleados[indiceEmpleado].Salario(empleados[indiceEmpleado].SueldoBasico, Antiguedad, empleados[indiceEmpleado].Cargo, empleados[indiceEmpleado].EstadoCivil);
 int jubilarse = empleados[indiceEmpleado].Jubilacion(edadEmpleado);

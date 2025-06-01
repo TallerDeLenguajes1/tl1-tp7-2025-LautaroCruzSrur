@@ -89,7 +89,7 @@ public Cargos Cargo
     }
     public int Jubilacion(int edad)
     {
-        int JubilacionEdad = edad - 65;
+        int JubilacionEdad = 65 - edad;
 
         return JubilacionEdad;
     }
